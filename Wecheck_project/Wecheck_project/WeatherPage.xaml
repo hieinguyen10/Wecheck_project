@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wecheck_project.WeatherPage"
+             NavigationPage.HasNavigationBar="True"
+             Title="Weather"
+             BackgroundImageSource="background_blur">
+    <NavigationPage.TitleView>
+        <Label Text="Weather" VerticalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <ScrollView BackgroundColor="Transparent">
+        <StackLayout>
+            <StackLayout>
+                <Image x:Name="imgWeather" Source="weCheck_logo" HeightRequest="150" WidthRequest="150" Margin="20"/>
+                <Label x:Name="lblLocation" Text="Montreal" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+                <Label x:Name="lblDate" Text="August 24, 2024" FontSize="Medium" HorizontalOptions="Center" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Frame CornerRadius="10" BorderColor="Gray" BackgroundColor="Transparent" Padding="5" HorizontalOptions="Fill" Margin="30" >
+                    <StackLayout Padding="5" Spacing="10">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Frame CornerRadius="10" BorderColor="black" BackgroundColor="#c4cde2" HorizontalOptions="FillAndExpand" >
+                                <StackLayout>
+                                    <Label Text="Temperature" FontSize="Medium" HorizontalOptions="Center"/>
+                                    <Label x:Name="lblTemperature" Text="20°" FontSize="50" HorizontalOptions="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="10" BorderColor="black" BackgroundColor="#c4cde2" HorizontalOptions="FillAndExpand">
+                                <StackLayout>
+                                    <Label Text="Humidity" FontSize="Medium" HorizontalOptions="Center"/>
+                                    <Label x:Name="lblHumidity" Text="3" FontSize="50" HorizontalOptions="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                            <Frame CornerRadius="10" BorderColor="black" BackgroundColor="#c4cde2" HorizontalOptions="FillAndExpand">
+                                <StackLayout>
+                                    <Label Text="Feel Like" FontSize="Medium" HorizontalOptions="Center"/>
+                                    <Label x:Name="lblFeelLike" Text="20°" FontSize="50" HorizontalOptions="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="10" BorderColor="black" BackgroundColor="#c4cde2" HorizontalOptions="FillAndExpand">
+                                <StackLayout>
+                                    <Label Text="Wind Speed" FontSize="Medium" HorizontalOptions="Center"/>
+                                    <Label x:Name="lblWindSpeed" Text="100" FontSize="50" HorizontalOptions="Center" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Frame CornerRadius="10" BorderColor="black" BackgroundColor="#c4cde2" Padding="5" HorizontalOptions="Fill" Margin="10">
+                    <StackLayout Padding="5" Spacing="10">
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="imgForecast_1" Source="home_icon" HeightRequest="40" VerticalOptions="Center"/>
+                            <Label x:Name="lblDate_1" Text="Monday" TextColor="Black" VerticalOptions="Center" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="lblTemp_1" Text="20°C" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" FontSize="20" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="imgForecast_2" Source="home_icon" HeightRequest="40" VerticalOptions="Center"/>
+                            <Label x:Name="lblDate_2" Text="Monday" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
+                            <Label x:Name="lblTemp_2" Text="20°C" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="imgForecast_3" Source="home_icon" HeightRequest="40" VerticalOptions="Center"/>
+                            <Label x:Name="lblDate_3" Text="Monday" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
+                            <Label x:Name="lblTemp_3" Text="20°C" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="imgForecast_4" Source="home_icon" HeightRequest="40" VerticalOptions="Center"/>
+                            <Label x:Name="lblDate_4" Text="Monday" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
+                            <Label x:Name="lblTemp_4" Text="20°C" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="imgForecast_5" Source="home_icon" HeightRequest="40" VerticalOptions="Center"/>
+                            <Label x:Name="lblDate_5" Text="Monday" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20"/>
+                            <Label x:Name="lblTemp_5" Text="20°C" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" FontSize="20"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wecheck_project.HistoryPage"
+             BackgroundImageSource="background">
+
+    <StackLayout VerticalOptions="Center" Margin="10">
+        <StackLayout HeightRequest="200" VerticalOptions="StartAndExpand">
+            <Label Text="HISTORY" FontFamily="Samantha" FontSize="40" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+        
+        <ListView x:Name="historyView" 
+                    HasUnevenRows="True"   
+                    SeparatorVisibility="None"
+                    VerticalOptions="Fill"
+                    ItemSelected="historyView_ItemSelected">
+
+
+            <ListView.ItemTemplate>
+                
+                <DataTemplate>
+                    
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem x:Name="Delete" Clicked="Delete_Clicked_1" Text="Delete" CommandParameter="{Binding .}">
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        <Grid Padding="10">
+                            <Frame CornerRadius="20" HasShadow="True">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Image Source="city_icon.png" WidthRequest="50" HeightRequest="35" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="{Binding location}" FontSize="30" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                    <ImageButton
+                                                BackgroundColor="Transparent"
+                                                Source="{Binding isFavorite, StringFormat='{0}_icon.png'}"
+                                                HorizontalOptions="EndAndExpand"
+                                                HeightRequest="40"
+                                                WidthRequest="40"
+                                                Clicked="ImageButton_Clicked"
+                                                CommandParameter="{Binding .}"/>
+
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+        
+    
+</ContentPage>

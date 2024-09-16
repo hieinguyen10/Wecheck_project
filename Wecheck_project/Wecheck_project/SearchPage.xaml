@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wecheck_project.SearchPage"
+             BackgroundImageSource="background_blur">
+    <StackLayout>
+        <Image Source="weCheck_logo" HeightRequest="300" WidthRequest="300" Margin="20"/>
+        <Frame BackgroundColor="#f1faff" BorderColor="#000000" Padding="5" CornerRadius="30" Margin="20" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image Source="location_icon.png" WidthRequest="40" HeightRequest="35" HorizontalOptions="Start"/>
+                <Entry x:Name="entryLocation" Margin="7" Placeholder="Search your location" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </Frame>
+        <Button x:Name="btnSearch" Text="Let's Go!!" Margin="145,0,145,0" Clicked="btnSearch_Clicked"/>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Label Text="420-MU6-AS Project" TextColor="Black" FontSize="Medium" HorizontalOptions="Center" />
+            <Label Text="Created by 201934163" TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

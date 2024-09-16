@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wecheck_project.FavoritePage"         
+             BackgroundImageSource="background">
+    <StackLayout VerticalOptions="Center" Margin="10">
+        <StackLayout HeightRequest="150">
+            <Label Text="FAVORITE" FontSize="40" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        
+        <ListView x:Name="favoriteView" 
+                HasUnevenRows="True"   
+                SeparatorVisibility="None"
+                VerticalOptions="Fill"
+                  ItemSelected="favoriteView_ItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem x:Name="Remove" Clicked="Remove_Clicked" Text="Remove" CommandParameter="{Binding .}">
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        <Grid Padding="10">
+                            <Frame CornerRadius="20" HasShadow="True">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Image Source="{Binding weatherIcon}" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="{Binding name}" FontSize="30" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                    <Label Text="{Binding temp}" FontSize="30" VerticalOptions="Center" HorizontalOptions="EndAndExpand" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                        
+
+
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

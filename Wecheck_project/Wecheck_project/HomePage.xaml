@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Wecheck_project"
+            x:Class="Wecheck_project.HomePage"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False"
+            NavigationPage.HasBackButton="False"
+            BarBackgroundColor="#aab9d5"
+            UnselectedTabColor="Black"
+            SelectedTabColor="#7187ba">
+
+    <local:WeatherPage IconImageSource="home_icon" Title="Home"/>
+    <local:FavoritePage IconImageSource="favorite_icon" Title="Favorite"/>
+    <local:HistoryPage IconImageSource="history_icon" Title="History"/>
+    <local:SearchPage IconImageSource="search_icon" Title="Search"/>
+</TabbedPage>
